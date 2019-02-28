@@ -1,0 +1,23 @@
+Project: SALES TAX INVOICE GENERATOR
+
+Definition:
+    Takes invoice data from NAP Online, processes them and outputs accounting data to be posted in GP.
+
+InvoiceCollection -> GroupbyRegion -> Export to Excel, GP output, JSON backup
+    -holds a list of InvoiceRows (have to iterate over them when updating)
+    -Can quickly fetch the earliest and latest invoice dates from the collection, use numpy on the columns of the invoice rows
+    -merge with other collections, keep track of merges done (update list of unique id's given to collections when they are made w/ uuid)
+    -save it as a JSON, which you can also use to load as a collection.
+    -groupby any level of SAR and output format of invoices that can be integrated into GP.
+    -groupby needs to be efficient
+    - accounting code filter settings
+
+InvoiceRow -> Validate (assess each row using functions from an accounting logic module that can be loaded from json)
+    - carry metainformation about the header of the csv file it was sourced from.
+    - run validate when Object is born, only if a validate value doesn't exist or is False, never if True.
+    - force validate all. Report on what reported false and why?     (Return a dict count of the results?,
+                                                                    null values are ok for Non Essential columns,
+                                                                    what is an essential column?)
+
+
+http://www.python4cpas.com/
