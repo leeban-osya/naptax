@@ -1,4 +1,4 @@
-# Sales Tax Generator
+# NAP Tax Generator
 Takes invoice data from NAP Online, processes them and groups by Regional invoices and prepares data
 to be integrated into GP.
 
