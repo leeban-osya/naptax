@@ -65,6 +65,22 @@ class NAPcollection(object):
         return _NAProw_list
 
     def parse_json(self):
+        """
+        For loading archived data.
+        :return:
+        """
+        pass
+
+    @staticmethod
+    def _parse_single_json(json_fp):
+        """
+        Loads a single .json backup file.
+        :param json_fp:
+        :return:
+        """
+        pass
+
+    def processSalesTax(self):
         pass
 
     # Gets earliest and latest invoice trx date in collection

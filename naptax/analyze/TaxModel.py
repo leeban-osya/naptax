@@ -9,8 +9,6 @@ def handleCSVTax(csv_fp):
     state_name = csv_fp.split('ZIP5_')[1][0:2]
 
 
-
-
 dirpath = os.path.dirname(__file__)
 directory = os.fsencode('data/TAXRATES_ZIP5')
 dir_path = os.path.join(dirpath, '../../../'+'data/TAXRATES_ZIP5')
