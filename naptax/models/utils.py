@@ -11,7 +11,8 @@ def sortDates(date_list):
         date_array.append(temp_date)
 
     sorted_dates = np.sort(date_array, axis=0)
-    return sorted_dates[0].astype(datetime.datetime).strftime('%Y.%m.%d'), sorted_dates[-1].astype(datetime.datetime).strftime('%Y.%m.%d')
+    return sorted_dates[0].astype(datetime.datetime).strftime('%Y-%m-%d'), \
+           sorted_dates[-1].astype(datetime.datetime).strftime('%Y-%m-%d')
 
 def getUniqueCounts(value_list):
     unique_counts = {}

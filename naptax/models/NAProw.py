@@ -2,7 +2,7 @@ __author__ = 'nblh'
 
 import json
 
-class NAPRow(object):
+class NAProw(object):
     def __init__(self, raw_data):
         self.raw_data = raw_data
         self.glacct = None
@@ -21,7 +21,10 @@ class NAPRow(object):
         self.region = None
 
     def __repr__(self):
-        return "<Invoice: SAR: {}-{}-{} GL Acct: {}>".format(self.section, self.area, self.region, self.glacct)
+        return "<Invoice: SAR: {}-{}-{} GL Acct: {}>".format(self.section,
+                                                             self.area,
+                                                             self.region,
+                                                             self.glacct)
 
     def generate_data(self):
         for k,v in self.raw_data.items():
@@ -55,6 +58,8 @@ class NAPRow(object):
                 self.creditamt = v
 
     def toJSON(self):
-        return json.dumps(self, default=lambda o: o.__dict__,
-                          sort_keys=True, indent=4)
+        return json.dumps(self,
+                          default=lambda o: o.__dict__,
+                          sort_keys=True,
+                          indent=4)
 
