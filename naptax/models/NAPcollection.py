@@ -19,14 +19,17 @@ class NAPcollection(object):
         """
         NAProw_list = list()
 
-        # if input is just a csv file
+        # If self.rows has data already, return error so
+        # can be sure loading processes only happens when first loaded?
+
+        # if input is just a csv file, process and return
         if self.filepath.endswith(".csv"):
             # construct filepath using self.csv_fp
             dirpath = os.path.dirname(__file__)
             csv_fp = os.path.join(dirpath, "../../" + self.filepath)
             return NAPcollection._parse_single_csv(csv_fp)
 
-        # process for directory input, process all csvs contained within
+        # directory input, process all .csv contained within directory
         dirpath = os.path.dirname(__file__)
         csv_dp = os.path.join(dirpath, "../../" + self.filepath)
         for filename in os.listdir(csv_dp):
