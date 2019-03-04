@@ -1,3 +1,5 @@
+__author__ = 'nabeelh-dev'
+
 GLTaxSettingsByState = {
 						'CA': {
 								'4010': True,

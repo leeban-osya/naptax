@@ -55,7 +55,7 @@ class NAPcollection(object):
             # Skip the first 6 lines of csv file due to header
             for i in range(0, 5, 1):
                 next(csv_file, None)
-            # Enumerate dict to calculate length of lines
+            # Enumerate dict to calculate length of lines in csv.
             data = dict(enumerate(csv.DictReader(csv_file)))
             print("{} lines in csv file.".format(len(data)))
 

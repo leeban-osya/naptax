@@ -1,3 +1,5 @@
+__author__ = 'nabeelh-dev'
+
 from naptax.models.NAPcollection import NAPcollection
 
 
