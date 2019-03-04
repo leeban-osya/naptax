@@ -93,6 +93,7 @@ class TaxRates(object):
             for zipcode, tax_rates in zipcode_tax_rates.items():
                 zipcode_to_state[zipcode] = state
 
+        print("Zipcode Tax Rates loaded successfully.")
         return {
                 "state_tax_rates": states_tax_rates,
                 "zipcode_to_state": zipcode_to_state
@@ -181,10 +182,10 @@ class TaxRates(object):
         if query_state is None:
             print("{} - zipcode not found!".format(zipcode_str))
             return None
-        query_tax_rate_results = self.tax_rates['state_tax_rates'][query_state][zipcode_str]
-        query_tax_rate_results['zipcode'] = zipcode_str
-        query_tax_rate_results['state'] = str(query_state)
-        return query_tax_rate_results
+        query_results = self.tax_rates['state_tax_rates'][query_state][zipcode_str]
+        query_results['zipcode'] = zipcode_str
+        query_results['state'] = str(query_state)
+        return query_results
 
 
 
