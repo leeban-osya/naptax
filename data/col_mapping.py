@@ -1,16 +1,20 @@
-nap_invoices_map = {
-                    'Segment3': 'Section',
-                    'Segment4': 'Area',
-                    'Segment5': 'Region',
-                    'Account Description': 'GLAcctDesc',
-                    'Record Type::Number': 'REF#',
-                    'CM Trx Type': 'REFNum',
-                    'TRX Timestamp Date': 'TRXDate',
-                    'GL Posting Date': 'GLDate',
-                    'Description': 'TRXDesc',
-                    'Main Account Segment': 'GLAcct',
-                    'PaidToRcvd From': 'PaidToRcvd',
-                    'TRX Amount': 'TRXAmount',
-                    'Originating Debit Amount': 'DebitAmt',
-                    'Originating Credit Amount': 'CreditAmt'
+csv_columnSettings = {
+                    'Segment3': 'section',
+                    'Segment4': 'area',
+                    'Segment5': 'region',
+                    'Account Description': 'glAcctDesc',
+                    'Record Type::Number': '',
+                    'CM Trx Type': 'refNum',
+                    'TRX Timestamp Date': 'trxDate',
+                    'GL Posting Date': 'glDate',
+                    'Description': 'trxDesc',
+                    'Main Account Segment': 'glAcct',
+                    'PaidToRcvd From': 'paidToRcvd',
+                    'TRX Amount': 'trxAmount',
+                    'Originating Debit Amount': 'debitAmt',
+                    'Originating Credit Amount': 'creditAmt',
+                    'header': {
+                                'Period': 'period',
+                                'Fiscal Year': 'fiscalYear'
+                                }
                     }

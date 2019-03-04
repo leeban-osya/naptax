@@ -139,7 +139,6 @@ class TaxRates(object):
                 next(csv_reader, None)
 
             for zipcode_tax in csv_reader:
-                # Add some validation check for each row: maybe check for len?
                 zipcode = zipcode_tax[1]
                 region_name = zipcode_tax[2]
                 state_rate = float(zipcode_tax[3])
@@ -158,6 +157,44 @@ class TaxRates(object):
                                         "est_special_rate": est_special_rate,
                                         "risk_level": risk_level
                                         }
+
+            """
+            # Below I am taking advantage of the order of the columns in the csv file.
+            # Ensure the colnames and functions you want to apply to them are in order
+            # in the zipcode_cols_config list below.
+            # Current Order in ZIP files:-
+                # State,ZipCode,TaxRegionName,StateRate,EstimatedCombinedRate,
+                # EstimatedCountyRate,EstimatedCityRate,EstimatedSpecialRate,RiskLevel
+            for zipcode_tax in csv_reader:
+                # Add some validation check for each row: maybe check for len?
+                # (col_name, col_function())
+                zipcode_cols_config = [
+                                        ["zipcode"], [lambda x: x],
+                                        ["region_name"], [lambda x: x],
+                                        ["state_rate"], [float()],
+                                        ["est_combined_rate"], [float],
+                                        ["est_country_rate"], [float],
+                                        ["est_city_rate"], [float],
+                                        ["est_special_rate"], [float],
+                                        ["risk level"], [int]
+                                        ]
+                # zip(*[list of tuples]) = actually unzips list of tuples.
+                # Apply contents to row starting from 2 because we are already using State & Zip
+                
+                for i, csv_data in enumerate(zipcode_tax[2:]):
+                    zipcode_rates[zipcode_cols_config[i]] = zipcode_cols_config[i](csv_data)
+                    
+                or
+                    
+                for csv_col in zipcode_tax[2:]:
+                    print(csv_col)
+                    for col_config in zipcode_cols_config:
+                        print(col_config)
+                        for col_name, col_func in zip(*col_config):
+                            print(col_name)
+                            zipcode_rates[col_name] =  col_func(csv_col) if col_config[1] else csv_col
+
+                """
 
         return {
                 'zipcode_rates': zipcode_rates

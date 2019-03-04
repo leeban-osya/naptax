@@ -1,13 +1,15 @@
 from naptax.models.NAProw import NAProw
-from naptax.models.utils import sortDates, getUniqueCounts
+from naptax.models.utils import getMinMaxDates, getUniqueCounts
+
 import csv
 import os
+from functools import reduce
 
 
 class NAPcollection(object):
     def __init__(self, csv_path, csv=True):
         self.filepath = csv_path
-        self.rows = self.parse_csv() if csv else self.parse_json()
+        self.naprows = self.parse_csv() if csv else self.parse_json()
 
 
     def parse_csv(self):
@@ -29,19 +31,19 @@ class NAPcollection(object):
             csv_fp = os.path.join(dirpath, "../../" + self.filepath)
             return NAPcollection._parse_single_csv(csv_fp)
 
-        # directory input, process all .csv contained within directory
+        # for dir at dirpath process all .csv contained within
         dirpath = os.path.dirname(__file__)
         csv_dp = os.path.join(dirpath, "../../" + self.filepath)
         for filename in os.listdir(csv_dp):
             if filename.endswith(".csv"):
-                filepath = os.path.join(csv_dp, filename)
-                for _NAProw in NAPcollection._parse_single_csv(filepath):
-                    NAProw_list.append(_NAProw)
+                csv_fp = os.path.join(csv_dp, filename)
+                for NAProw in NAPcollection._parse_single_csv(csv_fp, filename):
+                    NAProw_list.append(NAProw)
 
         return NAProw_list
 
     @staticmethod
-    def _parse_single_csv(csv_fp):
+    def _parse_single_csv(csv_fp, filename=None):
         """
         Takes filepath, opens CSV, skips first 5 lines,
         Reads each row and loads as a NAProw object.
@@ -51,19 +53,22 @@ class NAPcollection(object):
         """
         with open(csv_fp) as csv_file:
             print("Opened CSV Successfully: {}".format(str(csv_fp)))
-
             # Skip the first 6 lines of csv file due to header
+            ## IMPLEMENT passing down file header data, look into CSV class functions
             for i in range(0, 5, 1):
                 next(csv_file, None)
             # Enumerate dict to calculate length of lines in csv.
             data = dict(enumerate(csv.DictReader(csv_file)))
-            print("{} lines in csv file.".format(len(data)))
+            print("{} lines in csv.".format(len(data)))
 
             _NAProw_list = list()
             for i in range(0, len(data)):
-                temp_row = NAProw(data[i])
-                temp_row.generate_data()
-                _NAProw_list.append(temp_row)
+                _NAProw = NAProw(data[i])
+                _NAProw._update_source_metainfo({
+                                                's_filename': filename,
+                                                'source_rowNum': str(i)
+                                                })
+                _NAProw_list.append(_NAProw)
 
         return _NAProw_list
 
@@ -88,33 +93,40 @@ class NAPcollection(object):
 
     # Gets earliest and latest invoice trx date in collection
     def getTRXDateRange(self):
-        date_list = [row.trxdate for row in self.rows]
-        return sortDates(date_list)
+         date_list = [row.invoice_data['trxDate'] for row in self.naprows]
+         return getMinMaxDates(date_list)
+
+
 
     # Gets earliest and latest invoice trx date in collection
     def getPostingDateRange(self):
-        date_list = [row.gldate for row in self.rows]
-        return sortDates(date_list)
+        date_list = [row.invoice_data['glDate'] for row in self.naprows]
+        return getMinMaxDates(date_list)
 
     # Gets dict counts of all GL account codes
     def getGLCodes(self):
-        gl_list = [row.glacct for row in self.rows]
+        gl_list = [row.invoice_data['glAcct'] for row in self.naprows]
         return getUniqueCounts(gl_list)
 
     # Gets dict counts of all region codes
     def getRegionCodes(self):
-        region_codes = [row.region for row in self.rows]
+        region_codes = [row.invoice_data['region'] for row in self.naprows]
         return getUniqueCounts(region_codes)
 
     # Gets dict counts of all area codes
     def getAreaCodes(self):
-        area_codes = [row.area for row in self.rows]
+        area_codes = [row.invoice_data['area'] for row in self.naprows]
         return getUniqueCounts(area_codes)
 
     # Gets dict counts of all section codes
     def getSectionCodes(self):
-        section_codes = [row.section for row in self.rows]
+        section_codes = [row.invoice_data['section'] for row in self.naprows]
         return getUniqueCounts(section_codes)
+
+    # Gets unique file sources in collection
+    def getFileSources(self):
+        file_sources = [row.source_meta.get('s_filename') for row in self.naprows]
+        return getUniqueCounts(file_sources)
 
     # Outputs invoices grouped by chosen SAR level and in Excel/GP format.
     def groupInvoicesBy(self, bySAR=None, gpOutput="r", excelOutput=True):
