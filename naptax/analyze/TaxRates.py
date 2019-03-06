@@ -6,7 +6,7 @@ import csv
 
 class TaxRates(object):
     """
-    Data model that will load up static tax csv file data into a dict.
+    Reads tax rate data per Alavara.com
     Dict will be contained in self.tax_rates.
     Will be able to query by zipcode.
 
@@ -82,13 +82,13 @@ class TaxRates(object):
             # splits filename to identify state: TAXRATES_ZIP5_AK201901.csv
             csv_state_abbr = filename.split("ZIP5_")[1][:2]
             if filename.endswith(".csv"):
-                filepath = os.path.join(csv_dp, filename)
-                # states_tax_rates[csv_state_abbrevistion] = TaxRates._parse_single_csv(filepath)
-                csv_tax_rates = TaxRates._parse_single_csv(filepath)
-                # Assigns dict of tax rates by zipcode to state abbreviation
-                states_tax_rates[csv_state_abbr] = csv_tax_rates['zipcode_rates']
+                state_tax_csv = os.path.join(csv_dp, filename)
+                # Read and get data from csv
+                state_tax_data = TaxRates._parse_single_csv(state_tax_csv)
+                states_tax_rates[csv_state_abbr] = state_tax_data['zipcode_rates']
 
-        # Fill up zipcode_to_state dict
+        # Create and return a dict mapping zipcode to state
+        # This reverse lookup is used by self.query_by_zipcode()
         for state, zipcode_tax_rates in states_tax_rates.items():
             for zipcode, tax_rates in zipcode_tax_rates.items():
                 zipcode_to_state[zipcode] = state
@@ -134,7 +134,8 @@ class TaxRates(object):
         with open(csv_fp) as csv_file:
             #print("Opened Tax CSV Successfully: {}".format(str(csv_fp)))
             csv_reader = csv.reader(csv_file)
-            # Skip the first 6 line of csv file due to header
+            # Skip the first line of csv file due to header
+            ## Keep header information in the future??
             for i in range(0, 1, 1):
                 next(csv_reader, None)
 
