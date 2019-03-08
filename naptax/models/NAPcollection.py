@@ -96,8 +96,6 @@ class NAPcollection(object):
          date_list = [row.invoice_data['trxDate'] for row in self.naprows]
          return getMinMaxDates(date_list)
 
-
-
     # Gets earliest and latest invoice trx date in collection
     def getPostingDateRange(self):
         date_list = [row.invoice_data['glDate'] for row in self.naprows]
