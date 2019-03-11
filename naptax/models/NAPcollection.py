@@ -64,7 +64,7 @@ class NAPcollection(object):
             _NAProw_list = list()
             for i in range(0, len(data)):
                 _NAProw = NAProw(data[i])
-                _NAProw._update_source_metainfo({
+                _NAProw._set_source_metainfo({
                                                 's_filename': filename,
                                                 'source_rowNum': str(i)
                                                 })

@@ -1,0 +1,2 @@
+https://www.programiz.com/python-programming/property
+https://stackoverflow.com/questions/17330160/how-does-the-property-decorator-work

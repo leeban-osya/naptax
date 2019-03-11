@@ -21,14 +21,14 @@ class NAProw(object):
         row_data = dict()
         for k, v in raw_data.items():
             # Dict.get() returns None if key not in
-            # So columns will only be loaded if defined in col_mapping.py
+            # if mapped_key is None continue
             mapped_key = csv_columnSettings.get(k)
             if not mapped_key: continue
             row_data[mapped_key] = v
         return row_data
 
 
-    def _update_source_metainfo(self, source_meta):
+    def _set_source_metainfo(self, source_meta):
         """
 
         :param source_meta: dict
