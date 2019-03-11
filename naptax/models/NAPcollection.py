@@ -9,8 +9,15 @@ from functools import reduce
 class NAPcollection(object):
     def __init__(self, csv_path, csv=True):
         self.filepath = csv_path
-        self.naprows = self.parse_csv() if csv else self.parse_json()
+        self._naprows = self.parse_csv() if csv else self.parse_json()
 
+    @property
+    def naprows(self):
+        return self._naprows
+
+    @naprows.setter
+    def naprows(self, nap_rowlist):
+        self._naprows = nap_rowlist
 
     def parse_csv(self):
         """
@@ -29,7 +36,7 @@ class NAPcollection(object):
             # construct filepath using self.csv_fp
             dirpath = os.path.dirname(__file__)
             csv_fp = os.path.join(dirpath, "../../" + self.filepath)
-            return NAPcollection._parse_single_csv(csv_fp)
+            return NAPcollection._parse_single_csv(csv_fp, self.filepath)
 
         # for dir at dirpath process all .csv contained within
         dirpath = os.path.dirname(__file__)
@@ -37,6 +44,7 @@ class NAPcollection(object):
         for filename in os.listdir(csv_dp):
             if filename.endswith(".csv"):
                 csv_fp = os.path.join(csv_dp, filename)
+                print(filename)
                 for NAProw in NAPcollection._parse_single_csv(csv_fp, filename):
                     NAProw_list.append(NAProw)
 
@@ -64,10 +72,11 @@ class NAPcollection(object):
             _NAProw_list = list()
             for i in range(0, len(data)):
                 _NAProw = NAProw(data[i])
-                _NAProw._set_source_metainfo({
-                                                's_filename': filename,
-                                                'source_rowNum': str(i)
-                                                })
+                #print(filename, "nn")
+                _NAProw.source_metainfo = {
+                                            's_filename': filename,
+                                            'source_rowNum': str(i)
+                                            }
                 _NAProw_list.append(_NAProw)
 
         return _NAProw_list

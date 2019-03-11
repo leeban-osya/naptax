@@ -1,4 +1,4 @@
-csv_columnSettings = {
+nap_csv_colMap = {
                     'Segment3': 'section',
                     'Segment4': 'area',
                     'Segment5': 'region',
