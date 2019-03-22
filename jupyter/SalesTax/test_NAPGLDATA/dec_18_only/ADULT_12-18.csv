@@ -1,0 +1,104 @@
+GLOBAL GL ACCOUNTS DETAIL,,,,,,,,,,,,,,,,
+Print Out Date:,3/18/2019 10:21,,,,,,,,,,,,,,,Company name
+Fiscal Year:,07/01/2018 - 06/30/2019  (Active),,,,,,,,,,,,,,,naponline.ayso.org
+Period:,12/01/2018 - 12/31/2018,,,,,,,,,,,,,,,Leslie Alvarez
+,,,,,,,,,,,,,,,,
+Record Type::Number,CM Trx Type,TRX Timestamp Date,GL Posting Date,Trx Number,PaidToRcvd From,Description,TRX Amount,Originating Debit Amount,Originating Credit Amount,Main Account Segment,Segment2,Segment3,Segment4,Segment5,Segment6,Account Description
+20::8,Supplier Invoice,2/2/2019,12/9/2018,8,NOCRA,NOCRA Inv ADULT-03 Fall 2018 assignor and forfeit fee,$0.00 ,$0.00 ,$162.00 ,2010,0,0A11,Q,0,0,Accounts Payable/AP Trade
+20::8,Supplier Invoice,2/2/2019,12/9/2018,8,NOCRA,NOCRA Inv ADULT-03 Fall 2018 assignor and forfeit fee // Inv ayso ADULT-03,$0.00 ,$162.00 ,$0.00 ,5313,0,0A11,Q,0,0,Referee Fees
+2::25,Bank Deposit,2/12/2019,12/1/2018,23,ANALYSIS SERVICE CHARGE,,$0.00 ,$0.00 ,$5.00 ,8305,0,0A11,Q,0,0,Bank Fees
+2::25,Bank Deposit,2/12/2019,12/1/2018,23,ANALYSIS SERVICE CHARGE, // REVERSED:,$0.00 ,$5.00 ,$0.00 ,8305,0,0A11,Q,0,0,Bank Fees
+2::26,Bank Deposit,2/12/2019,12/1/2018,23,Blue Sombrero - Credit Card,,($42.20),$0.00 ,$42.20 ,4005,0,0A11,Q,0,0,Registration Fee
+1::34,Bank Payment,2/12/2019,12/1/2018,28,ANALYSIS SERVICE CHARGE,,$5.00 ,$5.00 ,$0.00 ,8305,0,0A11,Q,0,0,Bank Fees
+2::27,Bank Deposit,2/14/2019,12/8/2018,24,Blue Sombrero - Credit Card,,($437.40),$0.00 ,$437.40 ,4005,0,0A11,Q,0,0,Registration Fee
+2::28,Bank Deposit,2/14/2019,12/27/2018,25,Blue Sombrero - Credit Card,,($340.20),$0.00 ,$340.20 ,4005,0,0A11,Q,0,0,Registration Fee
+1::35,Bank Payment,2/14/2019,12/14/2018,29,US Bank,,$5.00 ,$5.00 ,$0.00 ,8305,0,0A11,Q,0,0,Bank Fees
+1::8,Bank Payment,1/21/2019,12/1/2018,505,GIOVANNI G,,$30.00 ,$30.00 ,$0.00 ,5101,0,0A14,L,1408,0,Uniforms-Players-TAX PAID
+1::9,Bank Payment,1/21/2019,12/1/2018,506,VICTOR G,,$30.00 ,$30.00 ,$0.00 ,5101,0,0A14,L,1408,0,Uniforms-Players-TAX PAID
+1::10,Bank Payment,1/21/2019,12/1/2018,507,MARY P,,$30.00 ,$30.00 ,$0.00 ,5101,0,0A14,L,1408,0,Uniforms-Players-TAX PAID
+1::11,Bank Payment,1/21/2019,12/1/2018,509,Challenger Teamwear,,$161.95 ,$161.95 ,$0.00 ,5101,0,0A14,L,1408,0,Uniforms-Players-TAX PAID
+1::12,Bank Payment,1/21/2019,12/1/2018,510,CROWN AWARDS,,"$1,397.66 ","$1,397.66 ",$0.00 ,6010,0,0A14,L,1408,0,Awards & Gifts
+1::13,Bank Payment,1/21/2019,12/1/2018,4,SERVICE FEE,,$15.00 ,$15.00 ,$0.00 ,8305,0,0A14,L,1408,0,Bank Fees
+2::17,Bank Deposit,1/21/2019,12/1/2018,17,ONLINE BANKING TRANSFER FROM XXXX1214,,$0.00 ,$0.00 ,"$1,397.66 ",4005,0,0A14,L,1408,0,Registration Fee
+2::17,Bank Deposit,1/21/2019,12/1/2018,17,ONLINE BANKING TRANSFER FROM XXXX1214, // REVERSED:,$0.00 ,"$1,397.66 ",$0.00 ,4005,0,0A14,L,1408,0,Registration Fee
+1::14,Bank Payment,1/21/2019,12/10/2018,504,BRADLEY L,,$0.00 ,$504.00 ,$0.00 ,5101,0,0A14,L,1408,0,Uniforms-Players-TAX PAID
+1::14,Bank Payment,1/21/2019,12/10/2018,504,BRADLEY L, // REVERSED:,$0.00 ,$0.00 ,$504.00 ,5101,0,0A14,L,1408,0,Uniforms-Players-TAX PAID
+1::15,Bank Payment,1/21/2019,12/10/2018,504,BRADLEY L,,$60.00 ,$60.00 ,$0.00 ,5101,0,0A14,L,1408,0,Uniforms-Players-TAX PAID
+2::18,Bank Deposit,1/21/2019,12/1/2018,17,ONLINE BANKING TRANSFER FROM XXXX1214,,"($1,397.66)",$0.00 ,"$1,397.66 ",4005,0,0A14,L,1408,0,Registration Fee
+1::28,Bank Payment,2/5/2019,12/1/2018,28,El Dorado Savings Bank,,$3.00 ,$3.00 ,$0.00 ,8305,0,0A02,F,282,0,Bank Fees
+1::29,Bank Payment,2/5/2019,12/1/2018,29,El Dorado Savings Bank,,$3.00 ,$3.00 ,$0.00 ,8305,0,0A02,F,282,0,Bank Fees
+1::30,Bank Payment,2/5/2019,12/10/2018,30,AMAZON POS PURCHASE ,,$189.68 ,$189.68 ,$0.00 ,6020,0,0A02,F,282,0,Field Expenses
+1::31,Bank Payment,2/5/2019,12/31/2018,31,El Dorado Savings Bank,,$3.00 ,$3.00 ,$0.00 ,8305,0,0A02,F,282,0,Bank Fees
+1::15,Bank Payment,1/24/2019,12/1/2018,15,MONTHLY SERVICE FEE,,$15.00 ,$15.00 ,$0.00 ,8305,0,0A03,T,221,0,Bank Fees
+1::16,Bank Payment,1/28/2019,12/31/2018,16,MONTHLY SERVICE FEE,,$15.00 ,$15.00 ,$0.00 ,8305,0,0A03,T,221,0,Bank Fees
+2::15,Bank Deposit,1/28/2019,12/27/2018,14,Blue Sombrero - Credit Card,,($24.30),$0.00 ,$24.30 ,4005,0,0A03,T,1073,0,Registration Fee
+1::31,Bank Payment,1/28/2019,12/31/2018,21,PAPER STATEMENT FEE,,$2.00 ,$2.00 ,$0.00 ,8305,0,0A03,T,1073,0,Bank Fees
+1::35,Bank Payment,1/24/2019,12/31/2018,32,CHOICE ONE BANK ,,$8.00 ,$8.00 ,$0.00 ,8305,0,0A08,A,1354,0,Bank Fees
+1::20,Bank Payment,1/17/2019,12/1/2018,2608,Brian Lane, // BS PAID DATE 11/14/18,$67.78 ,$67.78 ,$0.00 ,5130,0,0A11,V,295,0,Equipment-TAX PAID
+1::14,Bank Payment,1/28/2019,12/31/2018,13,BANK OF AMERICA,,$16.00 ,$16.00 ,$0.00 ,8305,0,0A01,D,17,0,Bank Fees
+1::15,Bank Payment,1/28/2019,12/1/2018,14,BANK OF AMERICA, // BS 11/30/18,$16.00 ,$16.00 ,$0.00 ,8305,0,0A01,D,17,0,Bank Fees
+1::15,Bank Payment,1/17/2019,12/1/2018,15,Bank of America,MONTHLY FEE FOR BUSINESS FUNDAMENTALS // BS PAID DATE 11/01/18,$16.00 ,$16.00 ,$0.00 ,8305,0,0A11,R,152,0,Bank Fees
+1::16,Bank Payment,2/13/2019,12/3/2018,16,MONTHLY FEE FOR BUSINESS FUNDAMENTALS,,$16.00 ,$16.00 ,$0.00 ,8305,0,0A11,R,152,0,Bank Fees
+1::13,Bank Payment,2/4/2019,12/3/2018,13,MONTHLY FEE FOR ADDT&#039;L CHECKING,,$12.00 ,$12.00 ,$0.00 ,8305,0,0A03,B,715,0,Bank Fees
+1::145,Bank Payment,2/4/2019,12/1/2018,1104,CHECK(S) IMAGE(S) MISSING,,$25.00 ,$25.00 ,$0.00 ,4005,0,0A10,W,68,0,Registration Fee
+1::146,Bank Payment,2/4/2019,12/1/2018,1106,CHECK(S) IMAGE(S) MISSING,,$40.00 ,$40.00 ,$0.00 ,6020,0,0A10,W,68,0,Field Expenses
+1::147,Bank Payment,2/4/2019,12/1/2018,11111,CHECK(S) IMAGE(S) MISSING,,$45.00 ,$45.00 ,$0.00 ,6020,0,0A10,W,68,0,Field Expenses
+1::148,Bank Payment,2/4/2019,12/1/2018,1113,CHECK(S) IMAGE(S) MISSING,,$40.00 ,$40.00 ,$0.00 ,6020,0,0A10,W,68,0,Field Expenses
+1::149,Bank Payment,2/4/2019,12/1/2018,1114,CHECK(S) IMAGE(S) MISSING,,$40.00 ,$40.00 ,$0.00 ,6020,0,0A10,W,68,0,Field Expenses
+1::150,Bank Payment,2/4/2019,12/1/2018,1115,CHECK(S) IMAGE(S) MISSING,,$25.00 ,$25.00 ,$0.00 ,6020,0,0A10,W,68,0,Field Expenses
+1::151,Bank Payment,2/4/2019,12/1/2018,1116,CHECK(S) IMAGE(S) MISSING,,$25.00 ,$25.00 ,$0.00 ,6020,0,0A10,W,68,0,Field Expenses
+1::152,Bank Payment,2/4/2019,12/1/2018,1117,CHECK(S) IMAGE(S) MISSING,,$25.00 ,$25.00 ,$0.00 ,6020,0,0A10,W,68,0,Field Expenses
+1::153,Bank Payment,2/4/2019,12/1/2018,1118,CHECK(S) IMAGE(S) MISSING,,$25.00 ,$25.00 ,$0.00 ,6020,0,0A10,W,68,0,Field Expenses
+1::154,Bank Payment,2/4/2019,12/1/2018,1119,CHECK(S) IMAGE(S) MISSING,,$45.00 ,$45.00 ,$0.00 ,6020,0,0A10,W,68,0,Field Expenses
+1::155,Bank Payment,2/4/2019,12/1/2018,1120,CHECK(S) IMAGE(S) MISSING,,$45.00 ,$45.00 ,$0.00 ,6020,0,0A10,W,68,0,Field Expenses
+1::156,Bank Payment,2/4/2019,12/1/2018,1121,CHECK(S) IMAGE(S) MISSING,,$45.00 ,$45.00 ,$0.00 ,6020,0,0A10,W,68,0,Field Expenses
+1::157,Bank Payment,2/4/2019,12/1/2018,8,CHECK(S) IMAGE(S) MISSING,,$25.00 ,$25.00 ,$0.00 ,6020,0,0A10,W,68,0,Field Expenses
+1::158,Bank Payment,2/4/2019,12/11/2018,1124,CHECK(S) IMAGE(S) MISSING,,"$1,260.00 ","$1,260.00 ",$0.00 ,6020,0,0A10,W,68,0,Field Expenses
+2::17,Bank Deposit,1/16/2019,12/1/2018,16,INTEREST, // BS INTEREST DATE 11/30/18,($0.17),$0.00 ,$0.17 ,9105,0,0A09,B,126,0,Interest Revenue
+1::14,Bank Payment,2/11/2019,12/3/2018,1013,American Youth Soccer Organization,,$540.00 ,$540.00 ,$0.00 ,4005,0,0A09,B,126,0,Registration Fee
+1::15,Bank Payment,2/11/2019,12/29/2018,1014,LETS PLAY SOCCER,FIELD RENTAL ,"$1,320.00 ","$1,320.00 ",$0.00 ,4005,0,0A09,B,126,0,Registration Fee
+2::18,Bank Deposit,2/11/2019,12/5/2018,17,DEPOSIT,,"($1,960.00)",$0.00 ,"$1,960.00 ",4005,0,0A09,B,126,0,Registration Fee
+2::19,Bank Deposit,2/11/2019,12/31/2018,18,INTEREST ,,($0.23),$0.00 ,$0.23 ,9105,0,0A09,B,126,0,Interest Revenue
+1::70,Bank Payment,1/31/2019,12/1/2018,1045,DONNA M,,$0.00 ,$239.68 ,$0.00 ,4005,0,0A01,N,641,0,Registration Fee
+1::70,Bank Payment,1/31/2019,12/1/2018,1045,DONNA M, // REVERSED:,$0.00 ,$0.00 ,$239.68 ,4005,0,0A01,N,641,0,Registration Fee
+1::71,Bank Payment,1/31/2019,12/1/2018,1046,AUBREY B,,$38.66 ,$38.66 ,$0.00 ,8595,0,0A01,N,641,0,Other Expenses
+1::72,Bank Payment,1/31/2019,12/1/2018,1045,DONNA M,,$239.68 ,$239.68 ,$0.00 ,8595,0,0A01,N,641,0,Other Expenses
+1::73,Bank Payment,1/31/2019,12/1/2018,12,CITI BANK,,$15.00 ,$15.00 ,$0.00 ,8305,0,0A01,N,641,0,Bank Fees
+1::74,Bank Payment,1/31/2019,12/10/2018,13,CITI BANK,,$15.00 ,$15.00 ,$0.00 ,8305,0,0A01,N,641,0,Bank Fees
+2::18,Bank Deposit,1/31/2019,12/27/2018,18,Blue Sombrero - Credit Card,,($116.64),$0.00 ,$116.64 ,4005,0,0A01,S,1258,0,Registration Fee
+1::7,Bank Payment,2/9/2019,12/28/2018,122818,Blue Sombrero, // BUSINESS TO BUSINESS ACH BLUE SOMBRERO BLSOMBRERO 181227 AYSO ADULT SOCC 0001AYSO ADULT SOCCE ,$140.00 ,$140.00 ,$0.00 ,4006,0,0A11,L,0,0,Registration Fee Refunds
+1::8,Bank Payment,2/9/2019,12/1/2018,2003,Robert Dlugos, // Game Scheduling Fees,$375.00 ,$375.00 ,$0.00 ,7510,0,0A11,L,0,0,Internet/Website
+2::3,Bank Deposit,2/7/2019,12/1/2018,3,Blue Sombrero - Credit Card,,($427.68),$0.00 ,$291.60 ,4005,0,0A06,E,1112,0,Registration Fee
+2::3,Bank Deposit,2/7/2019,12/1/2018,3,Blue Sombrero - Credit Card,,($427.68),$0.00 ,$136.08 ,4005,0,0A06,E,1112,0,Registration Fee
+1::6,Bank Payment,2/7/2019,12/1/2018,6,FARMERS STATE BANK,,$3.00 ,$3.00 ,$0.00 ,8305,0,0A06,E,1112,0,Bank Fees
+1::7,Bank Payment,2/7/2019,12/1/2018,7,SALES TAX,,$0.21 ,$0.21 ,$0.00 ,8305,0,0A06,E,1112,0,Bank Fees
+1::8,Bank Payment,2/7/2019,12/1/2018,1155,CHECKS NOT ENCLOSED , // 9/18/18,$0.00 ,"$1,003.66 ",$0.00 ,4005,0,0A06,E,1112,0,Registration Fee
+1::8,Bank Payment,2/7/2019,12/1/2018,1155,CHECKS NOT ENCLOSED , // REVERSED:9/18/18,$0.00 ,$0.00 ,"$1,003.66 ",4005,0,0A06,E,1112,0,Registration Fee
+1::9,Bank Payment,2/7/2019,12/1/2018,1158,CHECKS NOT ENCLOSED , // 9/18/18,$0.00 ,$62.64 ,$0.00 ,4005,0,0A06,E,1112,0,Registration Fee
+1::9,Bank Payment,2/7/2019,12/1/2018,1158,CHECKS NOT ENCLOSED , // REVERSED:9/18/18,$0.00 ,$0.00 ,$62.64 ,4005,0,0A06,E,1112,0,Registration Fee
+1::10,Bank Payment,2/7/2019,12/1/2018,8,CHECKS NOT ENCLOSED , // 10/1/18,$0.00 ,$145.00 ,$0.00 ,4005,0,0A06,E,1112,0,Registration Fee
+1::10,Bank Payment,2/7/2019,12/1/2018,8,CHECKS NOT ENCLOSED , // REVERSED:10/1/18,$0.00 ,$0.00 ,$145.00 ,4005,0,0A06,E,1112,0,Registration Fee
+2::4,Bank Deposit,2/7/2019,12/1/2018,4,Blue Sombrero - Credit Card,,($68.04),$0.00 ,$68.04 ,4005,0,0A06,E,1112,0,Registration Fee
+1::11,Bank Payment,2/7/2019,12/1/2018,1160,CHECKS NOT ENCLOSED ,,$0.00 ,$160.00 ,$0.00 ,4005,0,0A06,E,1112,0,Registration Fee
+1::11,Bank Payment,2/7/2019,12/1/2018,1160,CHECKS NOT ENCLOSED , // REVERSED:,$0.00 ,$0.00 ,$160.00 ,4005,0,0A06,E,1112,0,Registration Fee
+1::12,Bank Payment,2/7/2019,12/1/2018,1159,CHECKS NOT ENCLOSED , // 10/1/18,$145.00 ,$145.00 ,$0.00 ,6020,0,0A06,E,1112,0,Field Expenses
+1::13,Bank Payment,2/7/2019,12/1/2018,1160,CHECKS NOT ENCLOSED ,,$160.00 ,$160.00 ,$0.00 ,6020,0,0A06,E,1112,0,Field Expenses
+1::14,Bank Payment,2/7/2019,12/1/2018,1155,CHECKS NOT ENCLOSED , // 9/18/18,"$1,003.66 ","$1,003.66 ",$0.00 ,6020,0,0A06,E,1112,0,Field Expenses
+1::15,Bank Payment,2/7/2019,12/1/2018,1158,CHECKS NOT ENCLOSED , // 9/18/18,$62.64 ,$62.64 ,$0.00 ,6020,0,0A06,E,1112,0,Field Expenses
+1::16,Bank Payment,2/7/2019,12/1/2018,1161,CHECKS NOT ENCLOSED , // 10/23/18,$579.94 ,$579.94 ,$0.00 ,6020,0,0A06,E,1112,0,Field Expenses
+1::17,Bank Payment,2/7/2019,12/1/2018,9,FARMERS STATE BANK,,$3.00 ,$3.00 ,$0.00 ,8305,0,0A06,E,1112,0,Bank Fees
+1::18,Bank Payment,2/7/2019,12/1/2018,10,SALES TAX,,$0.21 ,$0.21 ,$0.00 ,8305,0,0A06,E,1112,0,Bank Fees
+1::19,Bank Payment,2/7/2019,12/11/2018,1168,CHECKS NOT ENCLOSED ,,$777.40 ,$777.40 ,$0.00 ,6020,0,0A06,E,1112,0,Field Expenses
+1::20,Bank Payment,2/7/2019,12/31/2018,11,FARMERS STATE BANK,,$3.00 ,$3.00 ,$0.00 ,8305,0,0A06,E,1112,0,Bank Fees
+1::21,Bank Payment,2/7/2019,12/31/2018,12,SALES TAX,,$0.21 ,$0.21 ,$0.00 ,8305,0,0A06,E,1112,0,Bank Fees
+2::15,Bank Deposit,12/17/2018,12/11/2018,15,registrations, // 11/30 - 12/7/18,($87.48),$0.00 ,$120.00 ,4005,0,0A01,G,65,0,Registration Fee
+2::15,Bank Deposit,12/17/2018,12/11/2018,15,registrations, // 11/30 - 12/7/18,($87.48),$2.52 ,$0.00 ,8595,0,0A01,G,65,0,Other Expenses
+2::15,Bank Deposit,12/17/2018,12/11/2018,15,registrations, // 11/30 - 12/7/18,($87.48),$30.00 ,$0.00 ,5320,0,0A01,G,65,0,Payments to AYSO - Membership Fee
+2::16,Bank Deposit,12/17/2018,12/17/2018,16,registration, // 12/7 - 12/14/18,($43.74),$0.00 ,$75.00 ,4005,0,0A01,G,65,0,Registration Fee
+2::16,Bank Deposit,12/17/2018,12/17/2018,16,registration, // 12/7 - 12/14/18,($43.74),$1.26 ,$0.00 ,8595,0,0A01,G,65,0,Other Expenses
+2::16,Bank Deposit,12/17/2018,12/17/2018,16,registration, // 12/7 - 12/14/18,($43.74),$30.00 ,$0.00 ,5320,0,0A01,G,65,0,Payments to AYSO - Membership Fee
+2::17,Bank Deposit,1/5/2019,12/31/2018,17,registration, // 12/21 - 12/28/18,($43.74),$0.00 ,$75.00 ,4005,0,0A01,G,65,0,Registration Fee
+2::17,Bank Deposit,1/5/2019,12/31/2018,17,registration, // 12/21 - 12/28/18,($43.74),$1.26 ,$0.00 ,8595,0,0A01,G,65,0,Other Expenses
+2::17,Bank Deposit,1/5/2019,12/31/2018,17,registration, // 12/21 - 12/28/18,($43.74),$30.00 ,$0.00 ,5320,0,0A01,G,65,0,Payments to AYSO - Membership Fee
+2::2,Bank Deposit,2/12/2019,12/1/2018,2,Blue Sombrero - Credit Card,,($46.66),$0.00 ,$46.66 ,4005,0,0A11,S,258,0,Registration Fee
+1::1,Bank Payment,2/13/2019,12/28/2018,1,SCREEN PRIN. LEMON GROVE,,$666.00 ,$666.00 ,$0.00 ,8415,0,0A11,S,258,0,Photo/Video
